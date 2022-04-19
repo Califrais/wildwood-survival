@@ -35,7 +35,7 @@ def simple_simulated_data():
 
     # create survival-time and censoring indicator
     Y = np.zeros(n_samples)
-    delta = np.ones(n_samples) == 1
+    delta = np.ones(n_samples)
     Y[G == 0] = np.random.normal(30, 2, n_samples_group[0])
     Y[G == 1] = np.random.normal(20, 2, n_samples_group[1])
     Y[G == 2] = np.random.normal(10, 2, n_samples_group[2])
