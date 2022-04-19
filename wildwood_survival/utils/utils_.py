@@ -6,6 +6,18 @@ from lifelines import KaplanMeierFitter
 
 fontsize = 16
 def plot_survival_curves(delta, T, title):
+    """
+    Plot survival curves of given data
+
+    delta : np.array, shape = (n_samples, )
+        Censoring indicator.
+
+    T: np.array, shape = (n_samples, )
+        Censored times of the event of interest.
+
+    title: `str`
+        Title of figure
+    """
     fig, ax = plt.subplots(1, 2, figsize=(10,3))
 
     # histogram plot of survival time
